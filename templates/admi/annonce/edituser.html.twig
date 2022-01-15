@@ -1,0 +1,15 @@
+{% extends 'users.html.twig' %}
+
+{% block title %}  <div class="col-xs4"><h1>Modification du Profile de{{ app.user.nom }} {{ app.user.prenom }} </h1></div>
+{% endblock %}
+
+{% block body %}
+	<div class="grix xs4 container">
+    <div class="col-xs4"><h1>Le Profile de{{ app.user.nom }} {{ app.user.prenom }} 
+	</h1>
+	{{ form(form) }}
+	</div>
+		
+     
+	</div>
+{% endblock %}

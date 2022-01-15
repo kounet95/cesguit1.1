@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}une nouvelle Annonce{% endblock %}
+
+{% block body %}
+    <h1>Création d'un poste</h1>
+
+    {{ include('admi/annonce/_form.html.twig') }}
+
+    <a href="{{ path('annonce_index') }}">retour sur les postes</a>
+{% endblock %}

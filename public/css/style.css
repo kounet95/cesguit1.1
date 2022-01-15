@@ -1,0 +1,254 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0%;
+    margin: 0%;
+}
+ul{
+    margin: 0%;
+    padding: 0%;
+}
+li{
+    list-style-type: none;
+}
+h2{
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 2em;
+}
+a{
+    text-decoration: none;
+    color: black;
+
+}
+a #logo{
+    width: 10px;
+    color: #e55039;
+    height: 10px;
+}
+/* ***********************************details************************* */
+nav{
+overflow: hidden;
+background-color:#FFFAE1;
+position: fixed;
+width: 100%;
+opacity: 0.9;
+}
+header li{
+    float: right;
+    font-size: 1.2em;
+
+}
+header li a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 18px 16px;
+}
+#kounet{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    float: left;
+}
+/* *******************image principal************************** */
+#kb{
+    padding-top: 60px;
+    background-image: url(image/9.jpg);
+    height: 799px;
+}
+h1{
+    font-family: cursive;
+
+    text-align: center;
+    color: antiquewhite;
+    font-size: 6em;
+    margin-top: 40px;
+    text-shadow: 1px 3px 2px black;
+}
+#premiertrait{
+    height: 1px;
+    width: 25%;
+    margin: -3px auto;
+    background-color: #FFFAE1;
+    box-shadow: 1px 3px 2px red
+}
+h3{
+    text-align: center;
+    color: antiquewhite;
+    font-size: 3em;
+    text-shadow: 1px 3px 2px black
+}
+/* ****************presentation******************* */
+#kd1{
+    background-color: #fffae2;
+    padding: 10px 0px 100px 0px ;
+}
+#textintermediere{
+    padding: 0px 20px ;
+}
+#gb{
+    display: flex;
+    flex-wrap: wrap;
+ padding:30px 10px;
+    justify-content: space-between; 
+}
+.imagepromo h4{
+    font-family: cursive;
+    text-align: center;
+    font-size: 1.8em;
+    margin: 15px;
+    font-weight: 300;
+}
+.imagepromo img{
+    border-radius: 10px;
+    box-shadow: 5px 5px 3px 1px rgba(0,0,0,0.8);
+}
+.imagepromo img:hover{
+    opacity: 0.5;
+    transform: scale(1.05);
+    transition: 0.6s ease-in-out;
+}
+/* **********************Mes Categories***************** */
+#categories {
+    height: 1400px;
+    background-color: #3d1f31;
+    padding: 1px 2%;
+}
+#categories  h1{
+    padding-top: 60px;
+}
+#categories #sport,#categories #Actu,#categories #djob,#categories #cesguit,#categories #fromation{
+float: right;
+}
+#categories #sport p ,#categories #Actu p ,#categories #djob p ,#categories #cesguit p ,#categories #fromation p {
+    float: right;
+    background-color: blue;
+    margin-right: 120px;
+    box-shadow:-4px 4px 0 1px rgba(15,154, 156, 1);
+}
+/* **********************les appli a decouverte***************** */
+#kappli{
+    height: 1400px;
+    background-color: #f1f1f1;
+    padding: 1px 2%;
+}
+#kappli h2{
+    padding-top: 60px;
+}
+#jeux{ 
+    background:url();
+}
+#restaux{ 
+    background:url();
+}
+#clubdenuit{ 
+    background:url();
+}
+#transport{ 
+    background:url();
+}
+#kappli li{
+    margin: 65px 100px 0 100px;
+    height: 226px;
+    width: 55%;
+    max-width: 550px;
+    float: left;
+    box-shadow: 6px 6px 28px -1px rgba(0, 0, 0,0.75);
+}
+#kappli p{
+    height: 45px;
+    width: 225px;
+    background-color: #01df74;
+    float: right;
+    margin: 5àpx -180px 0 0;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 15px;
+    box-shadow: 4px 4px 0 1px rgba(90, 161, 43, 1);
+}
+#kappli #bloc{
+
+float:right;
+background-color: #e55039;
+margin-right: -182px;
+box-shadow: #fffae2;
+}
+#bloc p,#clubdenuit p {
+    float: left;
+    background-color: cyan;
+    margin-left: -180px;
+    box-shadow: -4px 4px 0 1px rgba(15,154, 156, 1);    
+}
+#kappli #transport,#kappli #restaux,#kapli #jeux{
+float: left;
+}
+#transport p ,#restaux p ,#jeux p{
+    float: right;
+    background-color: blue;
+    margin-right: 120px;
+    box-shadow:-4px 4px 0 1px rgba(15,154, 156, 1);
+}
+/* *******************footer************************ */
+footer{
+background-color: #524A3A;
+color: #FFFAE1;
+padding:20px 0 10px 0;
+text-align: center;
+}
+form{
+    margin: 0 auto;
+    max-width:900px;
+}
+input,textarea,button{
+    border: none;
+    width: 55%;
+    padding: 15px 10px;
+    margin: 1px 0;
+    font-size: 1.2em;
+    font-family: cursive;
+    border-radius: 8px;
+}
+textarea{
+    height: 120px;
+}
+button{
+    font-size: 1.5em;
+    background-color: #FFFAE1;
+}
+button:hover{
+    background-color: #e55039;
+    color: #FFFAE1;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+#deuxiemeTrait{
+    height: 1px;
+    width: 75%;
+    background-color: #FFFAE1;
+    margin: 60px auto;
+}
+#copyrighticons{
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0 10%;
+}
+#copyright{
+    width: 50%;
+    text-align: left;
+    color: #FFFAE1;
+}
+#icons{
+    width: 50px;
+    text-align: right;
+}
+#icons a {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 1.3em;
+    color: #FFFAE1;
+}
+#icons a:hover{
+    transform: scale(1.5);
+    transition: 01s;
+}

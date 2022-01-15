@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}BIENVENNUE{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+        <!-- Axentix CSS minified version -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@1.3.4/dist/css/axentix.min.css">
+        <link rel="stylesheet" href="{{asset('css/style.css')}}">
+        <link rel="stylesheet" href="{{asset('css/kounet.css')}}">
+
+        
+    </head>
+    <html>
+    <head>
+        <title>BLOGUE DE LA CESGUIT</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libbs/font-awersome/4.7.0/css/font-awersome.css">
+        <meta charset="utf-8">
+         <link rel="stylesheet" href="stylecss/style.css"/>
+    </head>
+      <body class="layout with-sidenav">
+        <header>
+            <nav class="navbar shadow-1 primary">
+   <a href="#" class="navbar-logo centered">
+     <img src="{{ asset('imagelogo/logo.jpeg') }}"  alt="cesguit" />
+   </a>
+   <a href="{{path('annonce_index')}}" target="_blank" class="navbar-brand">Accueil</a>
+   <div class="navbar-menu ml-auto">
+      <a class="navbar-link active" href="{{ path('app_logout') }}">Deconnexion</a>
+    
+  </div>
+ 
+ </nav>
+       
+        </header>
+          <div id="example-sidenav" data-ax="sidenav" class="sidenav shadow-1 large fixed white">
+      <div class="sidenav-header">
+        <button data-target="example-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+        <img class="sidenav-logo dropshadow-1" src="{{ asset('imagedefilante/gaseman.jpg') }}" alt="president" />
+      </div>
+      <a href="#" class="sidenav-link active">Mon Profil</a>
+      <a href="{{ path('annonce_new') }}" class="sidenav-link">Mes Annonces</a>
+    </div>
+        <main>
+        <button data-target="example-sidenav"
+        class="btn rounded-1 press amaranth dark-1 sidenav-trigger hide-md-up">
+          Open sidenav
+      </button>
+        {% block body %}{% endblock %}
+        </main>
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+        <!-- Axentix JS minified version -->
+<script src="https://cdn.jsdelivr.net/npm/axentix@1.3.4/dist/js/axentix.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes annonces
+{% endblock %}
+
+{% block body %}
+<div class="container">
+	<table class="table ">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Titre</th>
+				<th>Slug</th>
+				<th>Contenu</th>
+				<th>date de creation </th>
+				<th>Active</th>
+				<th>Images</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for annonce in annonces %}
+				<tr>
+					<td>{{ annonce.id }}</td>
+					<td>{{ annonce.title }}</td>
+					<td>{{ annonce.slug }}</td>
+					<td>{{ annonce.contenu }}</td>
+					<td>{{ annonce.createdAt ? annonce.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+					<td>{{ annonce.active }}
+						<label class="form-switch mt-2">
+							Off
+							<input type="checkbox"/>
+							<span class="slider"></span>
+							On
+						</label>
+					</td>
+					<td>{{ annonce.images }}</td>
+					<td>
+						<a href="{{ path('annonce_show', {'id': annonce.id}) }}">show</a>
+						<a href="{{ path('annonce_edit', {'id': annonce.id}) }}">edit</a>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="8">no records found</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	</div>
+<hr>
+	<button class="btn shadow-1 rounded-1 outline txt-blue txt-light-3"><span class="outline-text outline-invert"><a href="{{ path('annonce_new') }}">Création d'une annonce </a></span></button>
+{% endblock %}
