@@ -104,7 +104,6 @@
         "compile": [
             "php bin/console doctrine:migrations:migrate"
         ]
-    
     },
     "conflict": {
         "symfony/symfony": "*"
