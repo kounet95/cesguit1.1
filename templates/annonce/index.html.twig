@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Annonce index{% endblock %}
+
+{% block body %}
+    <h1>MES ANNONCES</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Slug</th>
+                <th>Contenu</th>
+                <th>CreatedAt</th>
+                <th>Active</th>
+                <th>Images</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for annonce in annonces %}
+            <tr>
+                <td>{{ annonce.id }}</td>
+                <td>{{ annonce.title }}</td>
+                <td>{{ annonce.slug }}</td>
+                <td>{{ annonce.contenu }}</td>
+                <td>{{ annonce.createdAt ? annonce.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ annonce.active ? 'Yes' : 'No' }}</td>
+                <td>{{ annonce.images }}</td>
+                <td>
+                    <a href="{{ path('annonce_show', {'id': annonce.id}) }}">VOIR</a>
+                    <a href="{{ path('annonce_edit', {'id': annonce.id}) }}">MODIFIER</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">LA LISTE EST VIDE</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('annonce_new') }}">CREATION D'UNE NOUVELLE ANNONCE</a>
+{% endblock %}
